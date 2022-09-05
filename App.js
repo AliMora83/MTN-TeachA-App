@@ -1,10 +1,14 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
-import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
+import {
+  NavigationContainer,
+  DefaultTheme,
+} from "@react-navigation/native";
 import { useFonts } from "expo-font";
 
 import Home from "./screens/Home";
 import Details from "./screens/Details";
+import Prot from "./screens/Prot";
 
 const theme = {
   ...DefaultTheme,
@@ -35,8 +39,18 @@ const App = () => {
         }}
         initialRouteName="Home"
       >
-        <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="Details" component={Details} />
+        <Stack.Screen
+          name="Home"
+          component={Home}
+        />
+        <Stack.Screen
+          name="Details"
+          component={Details}
+        />
+        <Stack.Screen
+          name="Prot"
+          component={Prot}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
