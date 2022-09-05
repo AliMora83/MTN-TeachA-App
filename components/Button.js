@@ -1,9 +1,22 @@
 import React from "react";
-import { TouchableOpacity, Text, Image } from "react-native";
+import {
+  TouchableOpacity,
+  Text,
+  Image,
+} from "react-native";
 
-import { COLORS, SIZES, FONTS, SHADOWS } from "../constants";
+import {
+  COLORS,
+  SIZES,
+  FONTS,
+  SHADOWS,
+} from "../constants";
 
-export const CircleButton = ({ imgUrl, handlePress, ...props }) => {
+export const CircleButton = ({
+  imgUrl,
+  handlePress,
+  ...props
+}) => {
   return (
     <TouchableOpacity
       style={{
@@ -28,7 +41,12 @@ export const CircleButton = ({ imgUrl, handlePress, ...props }) => {
   );
 };
 
-export const RectButton = ({ minWidth, fontSize, handlePress, ...props }) => {
+export const RectButton = ({
+  minWidth,
+  fontSize,
+  handlePress,
+  ...props
+}) => {
   return (
     <TouchableOpacity
       style={{
@@ -49,6 +67,37 @@ export const RectButton = ({ minWidth, fontSize, handlePress, ...props }) => {
         }}
       >
         Assignment
+      </Text>
+    </TouchableOpacity>
+  );
+};
+
+export const RectButtont = ({
+  minWidth,
+  fontSize,
+  handlePress,
+  ...props
+}) => {
+  return (
+    <TouchableOpacity
+      style={{
+        backgroundColor: COLORS.primary,
+        padding: SIZES.small,
+        borderRadius: SIZES.extraLarge,
+        minWidth: minWidth,
+        ...props,
+      }}
+      onPress={handlePress}
+    >
+      <Text
+        style={{
+          fontFamily: FONTS.semiBold,
+          fontSize: fontSize,
+          color: COLORS.white,
+          textAlign: "center",
+        }}
+      >
+        Profile
       </Text>
     </TouchableOpacity>
   );

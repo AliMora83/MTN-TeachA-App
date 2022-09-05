@@ -15,6 +15,7 @@ import {
 } from "./SubInfo";
 import {
   RectButton,
+  RectButtont,
   CircleButton,
 } from "./Button";
 
@@ -80,6 +81,15 @@ const NFTCard = ({ data }) => {
             fontSize={SIZES.font}
             handlePress={() =>
               navigation.navigate("Details", {
+                data,
+              })
+            }
+          />
+          <RectButtont
+            minWidth={120}
+            fontSize={SIZES.font}
+            handlePress={() =>
+              navigation.navigate("Prot", {
                 data,
               })
             }

@@ -18,7 +18,7 @@ import {
 import {
   CircleButton,
   RectButton,
-  SubInfo,
+  SubInfoprot,
   DetailsDesc,
   DetailsBid,
   FocusedStatusBar,
@@ -47,7 +47,7 @@ const DetailsHeader = ({ data, navigation }) => (
   </View>
 );
 
-const Details = ({ route, navigation }) => {
+const DetailsProt = ({ route, navigation }) => {
   const { data } = route.params;
 
   return (
@@ -73,7 +73,11 @@ const Details = ({ route, navigation }) => {
       >
         <RectButton
           minWidth={170}
-          handlePress={() => navigation.goBack()}
+          handlePress={() =>
+            navigation.navigate("Details", {
+              data,
+            })
+          }
           fontSize={SIZES.large}
           {...SHADOWS.dark}
         />
@@ -95,7 +99,7 @@ const Details = ({ route, navigation }) => {
               data={data}
               navigation={navigation}
             />
-            <SubInfo />
+            <SubInfoprot />
             <View style={{ padding: SIZES.font }}>
               <DetailsDesc data={data} />
 
@@ -118,4 +122,4 @@ const Details = ({ route, navigation }) => {
   );
 };
 
-export default Details;
+export default DetailsProt;
