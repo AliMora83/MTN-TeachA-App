@@ -18,11 +18,12 @@ import {
 import {
   CircleButton,
   RectButton,
-  SubInfoprot,
+  SubInfo,
   DetailsDesc,
   DetailsBid,
   FocusedStatusBar,
 } from "../components";
+import { SubInfoProt } from "../components/SubInfo";
 
 const DetailsHeader = ({ data, navigation }) => (
   <View style={{ width: "100%", height: 373 }}>
@@ -36,12 +37,6 @@ const DetailsHeader = ({ data, navigation }) => (
       imgUrl={assets.left}
       handlePress={() => navigation.goBack()}
       left={15}
-      top={StatusBar.currentHeight + 10}
-    />
-
-    <CircleButton
-      imgUrl={assets.heart}
-      right={15}
       top={StatusBar.currentHeight + 10}
     />
   </View>
@@ -99,7 +94,7 @@ const DetailsProt = ({ route, navigation }) => {
               data={data}
               navigation={navigation}
             />
-            <SubInfoprot />
+            <SubInfoProt />
             <View style={{ padding: SIZES.font }}>
               <DetailsDesc data={data} />
 
@@ -111,7 +106,7 @@ const DetailsProt = ({ route, navigation }) => {
                     color: COLORS.primary,
                   }}
                 >
-                  Completed
+                  SUBJECTS
                 </Text>
               )}
             </View>

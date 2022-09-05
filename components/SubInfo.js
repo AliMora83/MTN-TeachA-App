@@ -97,6 +97,20 @@ export const People = () => {
   );
 };
 
+export const PeopleProt = () => {
+  return (
+    <View style={{ flexDirection: "row" }}>
+      {[assets.person02].map((imgUrl, index) => (
+        <ImageCmp
+          imgUrl={imgUrl}
+          index={index}
+          key={`People-${index}`}
+        />
+      ))}
+    </View>
+  );
+};
+
 export const EndDate = () => {
   return (
     <View
@@ -146,6 +160,23 @@ export const SubInfo = () => {
       }}
     >
       <People />
+      <EndDate />
+    </View>
+  );
+};
+
+export const SubInfoProt = () => {
+  return (
+    <View
+      style={{
+        width: "100%",
+        paddingHorizontal: SIZES.font,
+        marginTop: -SIZES.extraLarge,
+        flexDirection: "row",
+        justifyContent: "space-between",
+      }}
+    >
+      <PeopleProt />
       <EndDate />
     </View>
   );
