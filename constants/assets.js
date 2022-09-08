@@ -11,7 +11,7 @@ import nft03 from "../assets/images/history.png";
 import nft04 from "../assets/images/culture.png";
 import nft05 from "../assets/images/tech.png";
 import nft06 from "../assets/images/science.png";
-import nft07 from "../assets/images/Life.png";
+import nft07 from "../assets/images/life.png";
 
 import person01 from "../assets/images/person01.png";
 import person02 from "../assets/images/person02.png";

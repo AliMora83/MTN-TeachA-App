@@ -9,6 +9,7 @@ import { useFonts } from "expo-font";
 import Home from "./screens/Home";
 import Details from "./screens/Details";
 import Prot from "./screens/Prot";
+import Login from "./screens/Login";
 
 const theme = {
   ...DefaultTheme,
@@ -37,8 +38,12 @@ const App = () => {
         screenOptions={{
           headerShown: false,
         }}
-        initialRouteName="Home"
+        initialRouteName="Login"
       >
+        <Stack.Screen
+          name="Login"
+          component={Login}
+        />
         <Stack.Screen
           name="Home"
           component={Home}
